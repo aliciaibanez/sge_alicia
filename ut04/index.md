@@ -1,7 +1,5 @@
 ## UT04: El lenguaje de programación Python
 
-![Logo](./imagenes/LOGOpython.jpg)
-
 <br>
 
 ### Resolución de la batería de ejercicios pr0401.
