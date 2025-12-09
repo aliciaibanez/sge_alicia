@@ -1,7 +1,7 @@
 # Resolución de ejercicios de SGE
 <br>
 
-*Esta es la página de resolución de los ejercicios de la asignatura **SGE**.
+Esta es la página de resolución de los ejercicios de la asignatura **SGE**.
 
 <br>
 
@@ -13,3 +13,4 @@
 
 [**UT05:** Desarrollo de componentes. Primer módulo ](./ut05/index.md)
 
+[**UT06:** Desarrollo de componentes: MVC y herencia ](./ut06/index.md)
