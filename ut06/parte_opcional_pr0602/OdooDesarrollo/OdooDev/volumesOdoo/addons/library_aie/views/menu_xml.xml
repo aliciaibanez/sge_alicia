@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+
+    <!-- Menú principal -->
+    <menuitem name="Gestión de una Biblioteca"
+              id="library_aie.menu_root"/>
+
+    <!-- Nivel 2 -->
+    <menuitem name="Libros"
+              id="library_aie.menu_libros"
+              parent="library_aie.menu_root"
+              action="action_libros"/>
+
+    <!-- Nivel 2 -->
+    <menuitem name="Socios"
+              id="library_aie.menu_socios"
+              parent="library_aie.menu_root"
+              action="action_socios"/>
+
+     <!-- Nivel 2 -->
+    <menuitem name="Autores"
+              id="library_aie.menu_autores"
+              parent="library_aie.menu_root"
+              action="action_autores"/>
+
+    <!-- Nivel 2 -->
+    <menuitem name="Generos"
+              id="library_aie.menu_generos"
+              parent="library_aie.menu_root"
+              action="action_generos"/>
+  </data>
+</odoo>

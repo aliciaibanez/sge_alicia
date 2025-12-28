@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_library_aie_autores,library_aie.autores,model_library_aie_autores,base.group_user,1,1,1,1
+access_library_aie_socios,library_aie.socios,model_library_aie_socios,base.group_user,1,1,1,1
+access_library_aie_libros,library_aie.libros,model_library_aie_libros,base.group_user,1,1,1,1
+access_library_aie_generos,library_aie.generos,model_library_aie_generos,base.group_user,1,1,1,1

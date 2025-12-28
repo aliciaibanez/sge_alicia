@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="view_socios_tree">
+      <field name="name">library_aie.socios.tree</field>
+      <field name="model">library_aie.socios</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="telefono"/>
+          <field name="libros_ids"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- Form View (Vista Formulario)-->
+    <record model="ir.ui.view" id="view_socios_form">
+    <field name="name">library_aie.socios.form</field>
+    <field name="model">library_aie.socios</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                  <field name="nombre"/>
+                  <field name="telefono"/>
+                  <field name="libros_ids"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- actions opening views on models -->
+
+<record model="ir.actions.act_window" id="action_socios">
+    <field name="name">Socios</field>
+    <field name="res_model">library_aie.socios</field>
+    <field name="view_mode">tree,form</field>
+</record>
+  </data>
+</odoo>

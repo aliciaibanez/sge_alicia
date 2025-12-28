@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="view_generos_tree">
+      <field name="name">library_aie.generos.tree</field>
+      <field name="model">library_aie.generos</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="nombre"/>
+            <field name="libro_id"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- Form View (Vista Formulario)-->
+    <record model="ir.ui.view" id="view_generos_form">
+    <field name="name">library_aie.generos.form</field>
+    <field name="model">library_aie.generos</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="nombre"/>
+                    <field name="libro_id"/>
+
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- actions opening views on models -->
+
+<record model="ir.actions.act_window" id="action_generos">
+    <field name="name">Géneros</field>
+    <field name="res_model">library_aie.generos</field>
+    <field name="view_mode">tree,form</field>
+</record>
+  </data>
+</odoo>
