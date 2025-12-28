@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+
+    <!-- Menú principal -->
+    <menuitem name="Gestión de productos"
+              id="stock_management.menu_root"/>
+
+    <!-- Nivel 2 -->
+    <menuitem name="Productos"
+              id="stock_management.menu_product"
+              parent="stock_management.menu_root"
+              action="action_product"/>
+  </data>
+</odoo>

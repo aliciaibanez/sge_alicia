@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="view_product_tree">
+      <field name="name">stock_management.product.tree</field>
+      <field name="model">stock_management.stock_product</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="category"/>
+          <field name="price"/>
+          <field name="quantity"/>
+          <field name="total_value"/>
+          <field name="minimum_quantity"/>
+          <field name="stock_status"/>
+          <field name="full_name"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- Form View (Vista Formulario)-->
+    <record model="ir.ui.view" id="view_product_form">
+    <field name="name">stock_management.product.form</field>
+    <field name="model">stock_management.stock_product</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                  <field name="nombre"/>
+                  <field name="category"/>
+                  <field name="price"/>
+                  <field name="quantity"/>
+                  <field name="total_value"/>
+                  <field name="minimum_quantity"/>
+                  <field name="stock_status"/>
+                  <field name="full_name"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+
+    <!-- actions opening views on models -->
+
+<record model="ir.actions.act_window" id="action_product">
+    <field name="name">Productos</field>
+    <field name="res_model">stock_management.stock_product</field>
+    <field name="view_mode">tree,form</field>
+</record>
+  </data>
+</odoo>
