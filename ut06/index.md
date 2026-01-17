@@ -10,4 +10,5 @@
 2. [**PR0602:** Campos relacionales](./pr0602/pr0602.md)
 3. [**PR0603:** Campos calculados y restricciones](./pr0603/pr0603.md)
 4. [**PR0604:** Vista de tipo lista](./pr0604/pr0604.md)
+5. [**PR0606:** Gestión de un taller mecánico](./pr0606/pr0606.md)
 
