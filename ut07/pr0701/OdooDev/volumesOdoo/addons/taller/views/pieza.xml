@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="taller_pieza">
+      <field name="name">Pieza</field>
+      <field name="model">taller.pieza</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre" />
+          <field name="codigo" />
+          <field name="precio_unitario" decoration-danger="precio_unitario &gt; 100"
+            decoration-success="precio_unitario &lt; 10"
+            decoration-muted="precio_unitario &lt; 10 &lt; 100" />
+          <field name="reparacion_ids" />
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="taller.action_taller_pieza">
+      <field name="name">Pieza</field>
+      <field name="res_model">taller.pieza</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>

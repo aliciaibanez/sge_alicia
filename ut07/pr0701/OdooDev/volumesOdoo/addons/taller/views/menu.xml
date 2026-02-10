@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+
+
+        <!-- Top menu item -->
+
+        <menuitem name="taller" id="taller.menu_root" />
+
+        <!-- menu categories -->
+
+        <menuitem name="Cliente" id="taller.menu_cliente" parent="taller.menu_root"
+            action="taller.action_taller_cliente" />
+
+        <menuitem name="Pieza" id="taller.menu_pieza" parent="taller.menu_root"
+            action="taller.action_taller_pieza" />
+
+        <menuitem name="Reparacion" id="taller.menu_reparacion" parent="taller.menu_root"
+            action="taller.action_taller_reparacion" />
+
+        <menuitem name="Vehiculo" id="taller.menu_vehiculo" parent="taller.menu_root"
+            action="taller.action_taller_vehiculo" />
+
+    </data>
+</odoo>

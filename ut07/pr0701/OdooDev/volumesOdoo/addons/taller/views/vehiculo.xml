@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="taller_vehiculo">
+      <field name="name">Vehiculo</field>
+      <field name="model">taller.vehiculo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="matricula" />
+          <field name="marca" />
+          <field name="modelo" />
+          <field name="anio" />
+          <field name="cliente_id" />
+          <field name="reparacion_ids" />
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="taller.action_taller_vehiculo">
+      <field name="name">Vehículo</field>
+      <field name="res_model">taller.vehiculo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>

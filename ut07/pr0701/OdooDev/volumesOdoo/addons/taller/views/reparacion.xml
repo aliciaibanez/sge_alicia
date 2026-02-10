@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+        <!-- Vista árbol de Reparaciones -->
+        <record model="ir.ui.view" id="view_taller_reparacion_tree">
+            <field name="name">taller.reparacion.tree</field>
+            <field name="model">taller.reparacion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="fecha_inicio"/>
+                    <field name="fecha_fin"/>
+                    <field name="descripcion"/>
+
+                    <field name="estado"
+                           decoration-success="estado == 'finalizada'"
+                           decoration-primary="estado == 'en_curso'"
+                           decoration-muted="estado == 'borrador'"/>
+
+                    <button name="abrir_reparacion"
+                            type="object"
+                            string="Abrir"
+                            icon="fa-play"
+                            class="btn-success"
+                            attrs="{'invisible': [('estado', '!=', 'borrador')]}"/>
+
+                    <button name="cerrar_reparacion"
+                            type="object"
+                            string="Cerrar"
+                            icon="fa-check"
+                            class="btn-primary"
+                            attrs="{'invisible': [('estado', '!=', 'en_curso')]}"/>
+
+                    <button name="reabrir_reparacion"
+                            type="object"
+                            string="Reabrir"
+                            icon="fa-undo"
+                            class="btn-danger"
+                            attrs="{'invisible': [('estado', '!=', 'finalizada')]}"/>
+
+                    <field name="coste_total"
+                           decoration-danger="coste_total &gt; 500"
+                           decoration-warning="coste_total &gt;= 100 and coste_total &lt;= 500"
+                           decoration-success="coste_total &lt; 100"/>
+
+                    <field name="vehiculo_id"/>
+                    <field name="tecnico_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Acción -->
+        <record model="ir.actions.act_window" id="action_taller_reparacion">
+            <field name="name">Reparaciones</field>
+            <field name="res_model">taller.reparacion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

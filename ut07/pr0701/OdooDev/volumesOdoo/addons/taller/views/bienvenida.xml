@@ -1,0 +1,12 @@
+<odoo>
+    <template id="taller.bienvenida">
+
+        <t t-call="web.html_container">
+
+            <div class="container mt-5">
+                <h1>Bienvenido al Taller</h1>
+                <p> Esta es la página de bienvenida del módulo <strong>Taller</strong>. </p>
+            </div>
+        </t>
+    </template>
+</odoo>

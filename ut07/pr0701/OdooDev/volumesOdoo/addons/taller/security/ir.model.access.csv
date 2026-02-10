@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_taller_cliente,taller.cliente,model_taller_cliente,base.group_user,1,1,1,1
+access_taller_pieza,taller.pieza,model_taller_pieza,base.group_user,1,1,1,1
+access_taller_reparacion,taller.reparacion,model_taller_reparacion,base.group_user,1,1,1,1
+access_taller_vehiculo,taller.vehiculo,model_taller_vehiculo,base.group_user,1,1,1,1
