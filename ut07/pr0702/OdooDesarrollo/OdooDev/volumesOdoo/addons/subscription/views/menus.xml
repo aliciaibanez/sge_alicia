@@ -1,0 +1,18 @@
+<odoo>
+
+    <!-- Menú raíz -->
+    <menuitem name="Suscripciones"
+              id="subscription.menu_root"/>
+
+    <!-- Menús que abren directamente las vistas -->
+    <menuitem name="Suscripciones básico"
+              id="subscription.menu_basic"
+              parent="subscription.menu_root"
+              action="action_subscription_basic"/>
+
+    <menuitem name="Suscripciones uso"
+              id="subscription.menu_uso"
+              parent="subscription.menu_root"
+              action="action_subscription_uso"/>
+
+</odoo>

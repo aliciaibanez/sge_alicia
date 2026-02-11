@@ -1,0 +1,37 @@
+<odoo>
+<record id="view_subscription_tree_basic" model="ir.ui.view">
+    <field name="name">subscription.tree.basic</field>
+    <field name="model">subscription.subscription</field>
+    <field name="arch" type="xml">
+        <tree
+            decoration-danger="status == 'expired'"
+            decoration-warning="status == 'cancelled'"
+            limit="15">
+
+            <field name="name" string="Suscripción"/>
+            <field name="customer_id" string="Cliente"/>
+            <field name="subscription_code" string="Código"/>
+            <field name="start_date" string="Fecha de inicio"/>
+            <field name="end_date" string="Finaliza en" widget="remaining_days"/>
+            <button name = "ampliar_dias" type = "object" string = "Aplicar 15 días" class= "btn-primary" icon="fa-gift"/>
+            <field name="duration_months" string="Meses"/>
+            <field name="renewal_date" string="Renovación"/>
+            <field name="status" string="Estado" widget="radio"/>
+            <field name="is_renewable" string="Renovable"/>
+            <field name="auto_renewal" string="Autorenovación"/>
+            <field name="price"
+                   string="Precio"
+                   attrs="{'invisible': [('status', '=', 'cancelled')]}"/>
+
+        </tree>
+    </field>
+</record>
+    <!-- actions opening views on models -->
+
+   <record id="action_subscription_basic" model="ir.actions.act_window">
+    <field name="name">Suscripciones (Básico)</field>
+    <field name="res_model">subscription.subscription</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="view_subscription_tree_basic"/>
+</record>
+</odoo>

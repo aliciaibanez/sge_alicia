@@ -1,0 +1,34 @@
+<odoo>
+
+    <record id="view_subscription_tree_uso" model="ir.ui.view">
+        <field name="name">subscription.tree.usage</field>
+        <field name="model">subscription.subscription</field>
+        <field name="arch" type="xml">
+            <tree limit="15">
+
+                <field name="name" string="Suscripción"/>
+
+                <field name="usage_limit"
+                       string="Límite de uso"/>
+
+                <field name="current_usage"
+                       string="Uso actual"/>
+
+                <field name="use_percent"  
+                        string="Uso (%)"
+                        widget="progressbar"
+                        decoration-danger="use_percent &gt; 80"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+   <record id="action_subscription_uso" model="ir.actions.act_window">
+    <field name="name">Suscripciones (Uso)</field>
+    <field name="res_model">subscription.subscription</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="view_subscription_tree_uso"/>
+</record>
+</odoo>

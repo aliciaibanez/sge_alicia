@@ -15,4 +15,4 @@ Esta es la página de resolución de los ejercicios de la asignatura **SGE**.
 
 [**UT06:** Desarrollo de componentes: MVC y herencia ](./ut06/index.md)
 
-[PR0701: Página estática y dinámica básica ](./ut07/index.md)
+[**UT07:** Web Controllers y cliente web](./ut07/index.md)
